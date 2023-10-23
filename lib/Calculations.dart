@@ -1,12 +1,11 @@
 import 'dart:math';
-
-class Calculations{
-  Calculations({this.height, this.weight});
+class Calculations {
+  Calculations({required this.height, required this.weight}) : _bmi = 0.0;
 
   final int height;
   final int weight;
 
-  double _bmi;
+  late double _bmi;
 
   String calculateBMI() {
     _bmi = weight / pow(height / 100, 2);
@@ -22,5 +21,4 @@ class Calculations{
       return 'Underweight';
     }
   }
-
 }
